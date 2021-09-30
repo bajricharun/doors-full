@@ -246,7 +246,7 @@
         } else { return false; }
     }
 
-    // ornament_glass TABLE
+    // ornament_glass TABLEE
     function insert_ornament_glass($id, $name, $image_location) {
 
         global $db_conn;
