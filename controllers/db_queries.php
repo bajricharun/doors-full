@@ -15,56 +15,19 @@
             return false; 
         } else { return true; }
     }
-
-    function insert_door_model($id, $type, $location, $name, $price) {
-
-        global $db_conn;
-        
-        if (check_conn()) {
-            try {
-
-                $stmt = $db_conn->prepare("INSERT INTO door_model(id, type, image_location, name, price) VALUES (?, ?, ?, ?, ?)");
-                $stmt->bind_param("isssd", $id, $type, $location, $name, $price);
-                $stmt->execute();
-                $stmt->close();
-                
-                return true;
-
-            } catch(Exception $error) { return false; }
-        } else { return false; }
-    }
-
-    function insert_interior($id, $location, $name, $price) {
-
-        global $db_conn;
-        
-        if (check_conn()) {
-            try {
-                
-                $sql_query = "INSERT INTO interior(id, image_location, name, price) VALUES (?, ?, ?, ?)";
-
-                $stmt = $db_conn->prepare($sql_query);
-                $stmt->bind_param("issd", $id, $location, $name, $price);
-                $stmt->execute();
-                $stmt->close();
-                
-                return true;
-
-            } catch(Exception $error) { return false; }
-        } else { return false; }
-    }
     
-    function insert_type($id, $location, $name, $price) {
+    // SYSTEMS TABLE
+    function insert_systems($id, $name, $price, $image_location, $description) {
 
         global $db_conn;
         
         if (check_conn()) {
             try {
                 
-                $sql_query = "INSERT INTO type(id, image_location, name, price) VALUES (?, ?, ?, ?)";
+                $sql_query = "INSERT INTO systems(id, name, price, image_location, description) VALUES (?, ?, ?, ?, ?)";
 
                 $stmt = $db_conn->prepare($sql_query);
-                $stmt->bind_param("issd", $id, $location, $name, $price);
+                $stmt->bind_param("isdss", $id, $name, $price, $image_location, $description);
                 $stmt->execute();
                 $stmt->close();
                 
@@ -74,14 +37,14 @@
         } else { return false; }
     }
 
-    function select_data_type($id) {
+    function select_systems($id) {
 
         global $db_conn;
         
         if (check_conn()) {
             try {
                 
-                $sql_query = "SELECT * FROM type WHERE id=?";
+                $sql_query = "SELECT * FROM systems WHERE id=?";
 
                 $stmt = $db_conn->prepare($sql_query);
                 $stmt->bind_param("i", $id);
@@ -93,45 +56,41 @@
                     return "No results found ...";
                 }
 
-                return $data;
+                return json_encode($data->fetch_assoc(), JSON_FORCE_OBJECT);
 
             } catch(Exception $error) { return false; }
         } else { return false; }
     }
 
-    function select_data_interior($id) {
+    // colours TABLE
+    function insert_colours($id, $name, $type, $image_location) {
 
         global $db_conn;
         
         if (check_conn()) {
             try {
                 
-                $sql_query = "SELECT * FROM interior WHERE id=?";
+                $sql_query = "INSERT INTO colours(id, name, type, image_location) VALUES (?, ?, ?, ?)";
 
                 $stmt = $db_conn->prepare($sql_query);
-                $stmt->bind_param("i", $id);
+                $stmt->bind_param("isss", $id, $name, $type, $image_location);
                 $stmt->execute();
-
-                $data = $stmt->get_result();
-
-                if (empty($data->fetch_assoc())) {
-                    return "No results found ...";
-                }
-
-                return $data;
+                $stmt->close();
+                
+                return true;
 
             } catch(Exception $error) { return false; }
         } else { return false; }
     }
 
-    function select_data_door($id) {
+    function select_colours($id) {
 
         global $db_conn;
         
         if (check_conn()) {
             try {
                 
-                $sql_query = "SELECT * FROM door_model WHERE id=?";
+                $sql_query = "SELECT * FROM colours WHERE id=?";
 
                 $stmt = $db_conn->prepare($sql_query);
                 $stmt->bind_param("i", $id);
@@ -143,7 +102,191 @@
                     return "No results found ...";
                 }
 
-                return $data;
+                return json_encode($data->fetch_assoc(), JSON_FORCE_OBJECT);
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    // color_door_frame TABLE
+    function insert_color_door_frame($id, $name, $type, $image_location) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "INSERT INTO color_door_frame(id, name, type, image_location) VALUES (?, ?, ?, ?)";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("isss", $id, $name, $type, $image_location);
+                $stmt->execute();
+                $stmt->close();
+                
+                return true;
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    function select_color_door_frame($id) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "SELECT * FROM color_door_frame WHERE id=?";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+
+                $data = $stmt->get_result();
+
+                if (empty($data->fetch_assoc())) {
+                    return "No results found ...";
+                }
+
+                return json_encode($data->fetch_assoc(), JSON_FORCE_OBJECT);
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    // color_application TABLE
+    function insert_color_application($id, $name, $type, $image_location) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "INSERT INTO color_application(id, name, type, image_location) VALUES (?, ?, ?, ?)";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("isss", $id, $name, $type, $image_location);
+                $stmt->execute();
+                $stmt->close();
+                
+                return true;
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    function select_color_application($id) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "SELECT * FROM color_application WHERE id=?";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+
+                $data = $stmt->get_result();
+
+                if (empty($data->fetch_assoc())) {
+                    return "No results found ...";
+                }
+
+                return json_encode($data->fetch_assoc(), JSON_FORCE_OBJECT);
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    // decorative_glass TABLE
+    function insert_decorative_glass($id, $name, $image_location) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "INSERT INTO decorative_glass(id, name, image_location) VALUES (?, ?, ?)";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("iss", $id, $name, $image_location);
+                $stmt->execute();
+                $stmt->close();
+                
+                return true;
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    function select_decorative_glass($id) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "SELECT * FROM decorative_glass WHERE id=?";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+
+                $data = $stmt->get_result();
+
+                if (empty($data->fetch_assoc())) {
+                    return "No results found ...";
+                }
+
+                return json_encode($data->fetch_assoc(), JSON_FORCE_OBJECT);
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    // ornament_glass TABLE
+    function insert_ornament_glass($id, $name, $image_location) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "INSERT INTO ornament_glass(id, name, image_location) VALUES (?, ?, ?)";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("iss", $id, $name, $image_location);
+                $stmt->execute();
+                $stmt->close();
+                
+                return true;
+
+            } catch(Exception $error) { return false; }
+        } else { return false; }
+    }
+
+    function select_ornament_glass($id) {
+
+        global $db_conn;
+        
+        if (check_conn()) {
+            try {
+                
+                $sql_query = "SELECT * FROM ornament_glass WHERE id=?";
+
+                $stmt = $db_conn->prepare($sql_query);
+                $stmt->bind_param("i", $id);
+                $stmt->execute();
+
+                $data = $stmt->get_result();
+
+                if (empty($data->fetch_assoc())) {
+                    return "No results found ...";
+                }
+
+                return json_encode($data->fetch_assoc(), JSON_FORCE_OBJECT);
 
             } catch(Exception $error) { return false; }
         } else { return false; }
