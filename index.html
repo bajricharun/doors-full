@@ -1,148 +1,365 @@
 <head>
-    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/main.js?v=884" src="js/main.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="js/lib/jquery.min.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="underscore" src="js/lib/underscore.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="backbone" src="js/lib/backbone.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="imagesloaded" src="js/lib/imagesloaded.pkgd.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="fastclick" src="js/lib/hitriKlik.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="hammer" src="js/lib/hammer.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.core" src="js/lib/core-min.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="json2" src="js/lib/json2.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="xdomainrequest" src="js/lib/jquery.xdomainrequest.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="placeholder" src="js/lib/jquery.placeholder.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.base64" src="js/lib/enc-base64.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.utf" src="js/lib/enc-utf16-min.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.hmacsha" src="js/lib/hmac-sha256.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.pbkdf2" src="js/lib/pbkdf2.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/views/main/ExIn" src="js/app/views/main/ExIn.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="js/lib/analytics.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/views/main/BauformView" src="js/app/views/main/BauformView.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/HouseGrid" src="js/app/components/HouseGrid.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Copyright" src="js/app/components/Copyright.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Impressum" src="js/app/components/Impressum.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Cookie" src="js/app/components/Cookie.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/GDPR" src="js/app/components/GDPR.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Terms" src="js/app/components/Terms.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Switcher" src="js/app/components/Switcher.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/DoorImage2" src="js/app/components/DoorImage2.js?v=884"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/views/main/SearchView" src="js/app/views/main/SearchView.js?v=884"></script><base href="https://luxal.doorconfigurator.com/html-client/">
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/main.js?v=884" src="js/main.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="js/lib/jquery.min.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="underscore" src="js/lib/underscore.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="backbone" src="js/lib/backbone.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="imagesloaded" src="js/lib/imagesloaded.pkgd.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="fastclick" src="js/lib/hitriKlik.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="hammer" src="js/lib/hammer.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.core" src="js/lib/core-min.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="json2" src="js/lib/json2.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="xdomainrequest" src="js/lib/jquery.xdomainrequest.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="placeholder" src="js/lib/jquery.placeholder.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.base64" src="js/lib/enc-base64.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.utf" src="js/lib/enc-utf16-min.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.hmacsha" src="js/lib/hmac-sha256.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="cryptojs.pbkdf2" src="js/lib/pbkdf2.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/views/main/ExIn" src="js/app/views/main/ExIn.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ga" src="js/lib/analytics.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/views/main/BauformView" src="js/app/views/main/BauformView.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/HouseGrid" src="js/app/components/HouseGrid.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Copyright" src="js/app/components/Copyright.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Impressum" src="js/app/components/Impressum.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Cookie" src="js/app/components/Cookie.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/GDPR" src="js/app/components/GDPR.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/Terms" src="js/app/components/Terms.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" src="js/app/components/Switcher.js"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/components/DoorImage2" src="js/app/components/DoorImage2.js?v=884"></script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="app/views/main/SearchView" src="js/app/views/main/SearchView.js?v=884"></script>
+    <base href="https://luxal.doorconfigurator.com/html-client/" />
     <title>Konfigurator - Luxal</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="ICON" href="images/favicon.ico?3" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link rel="apple-touch-icon" href="images/homescreen-icon.png">
-    <link href="css/default-main.css?v=4" rel="stylesheet" type="text/css">
-    <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="ICON" href="images/favicon.ico?3" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon" href="images/homescreen-icon.png" />
+    <link href="css/default-main.css?v=4" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" type="text/css" />
     <script data-main="js/main.js?v=884" src="js/require.js?key=c5ee8c30bcc78945dfcb1fa7f77fd2b3&amp;lang=en"></script>
-<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script><link rel="stylesheet" href="css/konfigurator-eutherm-luxal.css?v=884"></head>
-<script>
+    <script data-dapp-detection="">
+        !(function() {
+            let e = !1;
 
+            function n() {
+                if (!e) {
+                    const n = document.createElement("meta");
+                    (n.name = "dapp-detected"), document.head.appendChild(n), (e = !0);
+                }
+            }
+            if (window.hasOwnProperty("ethereum")) {
+                if (
+                    ((window.__disableDappDetectionInsertion = !0),
+                        void 0 === window.ethereum)
+                )
+                    return;
+                n();
+            } else {
+                var t = window.ethereum;
+                Object.defineProperty(window, "ethereum", {
+                    configurable: !0,
+                    enumerable: !1,
+                    set: function(e) {
+                        window.__disableDappDetectionInsertion || n(), (t = e);
+                    },
+                    get: function() {
+                        if (!window.__disableDappDetectionInsertion) {
+                            const e = arguments.callee;
+                            (e &&
+                                e.caller &&
+                                e.caller.toString &&
+                                -1 !== e.caller.toString().indexOf("getOwnPropertyNames")) ||
+                            n();
+                        }
+                        return t;
+                    },
+                });
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="css/konfigurator-eutherm-luxal.css?v=884" />
+</head>
+<script>
     $(document).ready(function() {
-        if($('#switcher-btn').hasClass('inside-wall')) {
-        $('.grid').load('https://raw.githubusercontent.com/bajricharun/task/main/test.txt');
+        if ($("#switcher-btn").hasClass("inside-wall")) {
+            $(".grid").load(
+                "https://raw.githubusercontent.com/bajricharun/task/main/test.txt"
+            );
         } else {
-            $('.grid').load("https://raw.githubusercontent.com/bajricharun/task/main/test1.txt")
+            $(".grid").load(
+                "https://raw.githubusercontent.com/bajricharun/task/main/test1.txt"
+            );
         }
     });
 </script>
-<body style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+
+<body style="
+    touch-action: pan-y;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  ">
     <div id="konfigurator">
-        <div id="popup-container" class="hidden background">
-
-        </div>
+        <div id="popup-container" class="hidden background"></div>
         <div id="action-container" class="hidden">
-            <div class="event-plane">
-
-            </div>
+            <div class="event-plane"></div>
         </div>
         <div id="application-bar" class="image">
-            <div class="partner-logo ">
+            <div class="partner-logo">
                 <a target="_blank" href="https://luxal.co.uk/">
-                    <img class="logo-image" src="https://s3.door-konfigurator.com/eutherm2/logo/luxal.jpg?11">
+                    <img class="logo-image" src="https://s3.door-konfigurator.com/eutherm2/logo/luxal.jpg?11" />
                 </a>
                 <span class="logo-text">Luxal</span>
             </div>
-            <div class="right-container ">
-            
+            <div class="right-container">
                 <span class="model-name">AM 32E</span>
             </div>
         </div>
-        <div id="main-view" class="wall-grid"><div id="shortcut" class="ui-shortcut menu">
-            <a class="btn back">
-                <div class="icon">
-                    <div class="arrow">
-                        <div class="line-1"></div>
-                        <div class="line-2"></div>
-                        <div class="line-3"></div>
+        <div id="main-view" class="wall-grid">
+            <div id="shortcut" class="ui-shortcut menu">
+                <a class="btn back">
+                    <div class="icon">
+                        <div class="arrow">
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="menu-index">
+                    <a>2/15</a>
+                </div>
+                <a class="btn next">
+                    <div class="icon">
+                        <div class="arrow">
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                            <div class="line-3"></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div id="sandwich-btn" onclick="functionClick()">
+                <i class="sandwich">
+          <div class="line transition l-1st"></div>
+          <div class="line transition l-2nd"></div>
+          <div class="line transition l-3rd"></div>
+        </i>
+                <span class="label">Menu</span>
+            </div>
+            <div id="price-ui" class="hidden">
+                <div class="price-label">Price EUR</div>
+                <div class="price"></div>
+            </div>
+            <div id="wall-grid">
+                <div id="house-grid" style="display: block">
+                    <div class="grid"></div>
+                </div>
+                <div title="Click here to switch view." id="switcher-btn" class="inside-wall">
+                    <a class="outside-wall" onclick="switchViewOutside();">
+                        <i class="icon-out"></i>
+                        <span>Outside view</span>
+                    </a>
+                    <a class="inside-wall" onclick="switchViewInside();">
+                        <i class="icon-in"></i>
+                        <span>Inside view</span>
+                    </a>
+                    <div class="view-remark">
+                        <div class="arrow-up"></div>
+                        <div class="cross">
+                            <div class="line-1"></div>
+                            <div class="line-2"></div>
+                        </div>
+                        <span>Click here to switch view.</span>
                     </div>
                 </div>
-            </a>
-    
-        <div class="menu-index">
-            <a>2/15</a>
+            </div>
         </div>
-        <a class="btn next">
-            <div class="icon">
-                <div class="arrow">
-                    <div class="line-1"></div>
-                    <div class="line-2"></div>
-                    <div class="line-3"></div>
+        <div id="panel" class="panelView">
+            <div id="header">
+                <a id="home-btn">
+                    <i class="sandwich">
+            <div class="line transition l-1st"></div>
+            <div class="line transition l-2nd"></div>
+            <div class="line transition l-3rd"></div>
+          </i>
+                    <span class="title">Menu</span>
+                </a>
+                <a id="close-btn" onclick="functionClick()">
+                    <i class="cross">
+            <div class="line l-1st"></div>
+            <div class="line l-2nd"></div>
+          </i>
+                </a>
+            </div>
+            <div id="views" class="menu-view">
+                <div id="menu-view" class="scrolling">
+                    <a class="menu-item reset-view" cid="c44"><i class="icon"></i
+            ><i class="tooltip-el" title="Reset configuration"></i
+            ><span class="icon-title">Reset to default</span
+            ><span class="name">Reset configuration</span
+            ><span class="visited"></span></a
+          ><a class="menu-item search-model visited" cid="c45"
+            ><i class="icon"></i><i class="tooltip-el" title="Search model"></i
+            ><span class="icon-title">Search</span
+            ><span class="name">Search model</span
+            ><span class="visited"></span></a
+          ><a class="menu-item bauform visited" cid="c46"
+            ><i class="icon"></i><i class="tooltip-el" title="Type"></i
+            ><span class="icon-title">Type</span><span class="name">Type</span
+            ><span class="visited"></span></a
+          ><a class="menu-item model" cid="c47"
+            ><i class="icon"></i><i class="tooltip-el" title="Door model"></i
+            ><span class="icon-title">Door model</span
+            ><span class="name">Door model</span
+            ><span class="visited"></span></a
+          ><a class="menu-item insideModel" cid="c48"
+            ><i class="icon"></i><i class="tooltip-el" title="Interior"></i
+            ><span class="icon-title">Interior</span
+            ><span class="name">Interior</span><span class="visited"></span></a
+          ><a class="menu-item profil" cid="c49"
+            ><i class="icon"></i><i class="tooltip-el" title="Systems"></i
+            ><span class="icon-title">Systems</span
+            ><span class="name">Systems</span><span class="visited"></span></a
+          ><a class="menu-item konstruktion" cid="c50"
+            ><i class="icon"></i><i class="tooltip-el" title="Construction"></i
+            ><span class="icon-title">Construction</span
+            ><span class="name">Construction</span
+            ><span class="visited"></span></a
+          ><a class="menu-item color" cid="c51"
+            ><i class="icon"></i><i class="tooltip-el" title="Colors"></i
+            ><span class="icon-title">Colors</span
+            ><span class="name">Colors</span><span class="visited"></span></a
+          ><a class="menu-item ornament" cid="c52"
+            ><i class="icon"></i><i class="tooltip-el" title="Glass"></i
+            ><span class="icon-title">Glass</span><span class="name">Glass</span
+            ><span class="visited"></span></a
+          ><a class="menu-item dodatna" cid="c53"
+            ><i class="icon"></i
+            ><i class="tooltip-el" title="Door handles and parts"></i
+            ><span class="icon-title">Door handles and parts</span
+            ><span class="name">Door handles and parts</span
+            ><span class="visited"></span></a
+          ><a class="menu-item additional-equipment" cid="c54"
+            ><i class="icon"></i><i class="tooltip-el" title="Accessories"></i
+            ><span class="icon-title">Accessories</span
+            ><span class="name">Accessories</span
+            ><span class="visited"></span></a
+          ><a class="menu-item secureLatch" cid="c55"
+            ><i class="icon"></i><i class="tooltip-el" title="Locks"></i
+            ><span class="icon-title">Locks</span><span class="name">Locks</span
+            ><span class="visited"></span></a
+          ><a class="menu-item myHouse" cid="c56"
+            ><i class="icon"></i
+            ><i class="tooltip-el" title="Insert door into the house"></i
+            ><span class="icon-title">Insert door into the house</span
+            ><span class="name">Insert door into the house</span
+            ><span class="visited"></span></a
+          ><a class="menu-item anfrage" cid="c57"
+            ><i class="icon"></i
+            ><i class="tooltip-el" title="Print / Inquiry"></i
+            ><span class="icon-title">Print / Inquiry</span
+            ><span class="name">Print / Inquiry</span
+            ><span class="visited"></span></a
+          ><a class="menu-item referenceNumber" cid="c58"
+            ><i class="icon"></i
+            ><i class="tooltip-el" title="Load / save configuration"></i
+            ><span class="icon-title">Save / load</span
+            ><span class="name">Load / save configuration</span
+            ><span class="visited"></span
+          ></a>
                 </div>
+                <div id="bauform-view" class="scrolling single"></div>
+                <div id="search-model-view"></div>
+                <div id="reset-view">
+                </div>
+                <div id="inside-model-view"></div>
+                <div id="inquiry-view" class=""></div>
+                <div id="reference-view" class="scrolling"></div>
+                <div id="model-view" class="series"></div>
+                <div id="profile-view" class=""></div>
+                <div id="construction-view" class="scrolling"></div>
+                <div id="colors-view"></div>
+                <div id="glass-view" class="door-glass"></div>
+                <div id="equipment-view" class="drzala"></div>
+
+                <div id="additional-equipment-view" class="panelProtect generic-equipment-view"></div>
+                <div id="secureLatch-view" class="secureLatch-view"></div>
             </div>
-        </a>
-    </div><div id="sandwich-btn" onclick="functionClick()"><i class="sandwich">
-        <div class="line transition l-1st"></div>
-        <div class="line transition l-2nd"></div>
-        <div class="line transition l-3rd"></div>
-    </i>
-    <span class="label">Menu</span></div><div id="price-ui" class="hidden"><div class="price-label">Price EUR</div><div class="price"></div></div><div id="wall-grid"><div id="house-grid" style="display: block;"><div class="grid">
-        
+        </div>
     </div>
-    </div>
-    <div title="Click here to switch view." id="switcher-btn" class="inside-wall"><a class="outside-wall"  onclick="switchViewOutside();">
-        <i class="icon-out"></i>
-        <span>Outside view</span>
-    </a>
-    <a class="inside-wall" onclick="switchViewInside();">
-        <i class="icon-in"></i>
-        <span>Inside view</span>
-    </a>
-    <div class="view-remark">
-        <div class="arrow-up"></div>
-            <div class="cross" >
-                <div class="line-1"></div>
-                <div class="line-2"></div>
-            </div>
-        <span>Click here to switch view.</span>
-    </div></div></div></div><div id="panel" class="panelView"><div id="header">
-        <a id="home-btn">
-            <i class="sandwich">
-                <div class="line transition l-1st"></div>
-                <div class="line transition l-2nd"></div>
-                <div class="line transition l-3rd"></div>
-            </i>
-            <span class="title">Menu</span>
-        </a>
-        <a id="close-btn" onclick="functionClick()">
-            <i class="cross">
-                <div class="line l-1st"></div>
-                <div class="line l-2nd"></div>
-            </i>
-        </a>
-    </div>
-    <div id="views" class="menu-view"><div id="menu-view" class="scrolling"><a class="menu-item reset-view" cid="c44"><i class="icon"></i><i class="tooltip-el" title="Reset configuration"></i><span class="icon-title">Reset to default</span><span class="name">Reset configuration</span><span class="visited"></span></a><a class="menu-item search-model visited" cid="c45"><i class="icon"></i><i class="tooltip-el" title="Search model"></i><span class="icon-title">Search</span><span class="name">Search model</span><span class="visited"></span></a><a class="menu-item bauform visited" cid="c46"><i class="icon"></i><i class="tooltip-el" title="Type"></i><span class="icon-title">Type</span><span class="name">Type</span><span class="visited"></span></a><a class="menu-item model" cid="c47"><i class="icon"></i><i class="tooltip-el" title="Door model"></i><span class="icon-title">Door model</span><span class="name">Door model</span><span class="visited"></span></a><a class="menu-item insideModel" cid="c48"><i class="icon"></i><i class="tooltip-el" title="Interior"></i><span class="icon-title">Interior</span><span class="name">Interior</span><span class="visited"></span></a><a class="menu-item profil" cid="c49"><i class="icon"></i><i class="tooltip-el" title="Systems"></i><span class="icon-title">Systems</span><span class="name">Systems</span><span class="visited"></span></a><a class="menu-item konstruktion" cid="c50"><i class="icon"></i><i class="tooltip-el" title="Construction"></i><span class="icon-title">Construction</span><span class="name">Construction</span><span class="visited"></span></a><a class="menu-item color" cid="c51"><i class="icon"></i><i class="tooltip-el" title="Colors"></i><span class="icon-title">Colors</span><span class="name">Colors</span><span class="visited"></span></a><a class="menu-item ornament" cid="c52"><i class="icon"></i><i class="tooltip-el" title="Glass"></i><span class="icon-title">Glass</span><span class="name">Glass</span><span class="visited"></span></a><a class="menu-item dodatna" cid="c53"><i class="icon"></i><i class="tooltip-el" title="Door handles and parts"></i><span class="icon-title">Door handles and parts</span><span class="name">Door handles and parts</span><span class="visited"></span></a><a class="menu-item additional-equipment" cid="c54"><i class="icon"></i><i class="tooltip-el" title="Accessories"></i><span class="icon-title">Accessories</span><span class="name">Accessories</span><span class="visited"></span></a><a class="menu-item secureLatch" cid="c55"><i class="icon"></i><i class="tooltip-el" title="Locks"></i><span class="icon-title">Locks</span><span class="name">Locks</span><span class="visited"></span></a><a class="menu-item myHouse" cid="c56"><i class="icon"></i><i class="tooltip-el" title="Insert door into the house"></i><span class="icon-title">Insert door into the house</span><span class="name">Insert door into the house</span><span class="visited"></span></a><a class="menu-item anfrage" cid="c57"><i class="icon"></i><i class="tooltip-el" title="Print / Inquiry"></i><span class="icon-title">Print / Inquiry</span><span class="name">Print / Inquiry</span><span class="visited"></span></a><a class="menu-item referenceNumber" cid="c58"><i class="icon"></i><i class="tooltip-el" title="Load / save configuration"></i><span class="icon-title">Save / load</span><span class="name">Load / save configuration</span><span class="visited"></span></a></div><div id="bauform-view" class="scrolling single"><a class="bauform-item single" cid="c109"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door"></i></a><a class="bauform-item single_left" cid="c110"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door with left side glass"></i></a><a class="bauform-item single_right" cid="c111"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door with right side glass"></i></a><a class="bauform-item single_left_right" cid="c112"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door with left and right side glass"></i></a><a class="bauform-item single_top" cid="c113"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door with upper glass"></i></a><a class="bauform-item single_top_left" cid="c114"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door with left side glass and upper glass"></i></a><a class="bauform-item single_top_right" cid="c115"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door with right side glass and upper glass"></i></a><a class="bauform-item single_top_left_right" cid="c116"><div class="icon"><div class="checkmark"><div class="line-1"></div><div class="line-2"></div></div></div><i class="door" title="Single door with left and right side glass and upper glass"></i></a></div><div id="search-model-view"><div class="model-search-cont">
-        <input maxlength="20">
-        <span class="submit-search">Search</span>
-    </div>
-    <div class="model-search-list clear scrolling">
-        <div class="search-remark no-results hidden">Your search returned no results!</div>
-        <div class="search-remark start-search">Please enter at least 2 characters.</div>
-    </div></div></div></div></div>
     <script>
+        $("#home-btn").click(function() {
+            $("#views").removeClass();
+            $("#views").addClass("menu-view");
+        });
+        $(".reset-view").click(function() {
+            $("#views").removeClass();
+            $("#views").addClass("reset-view");
+            $("#reset-view").load(
+                "https://raw.githubusercontent.com/bajricharun/docs-for-doors/main/reset.view.html"
+            );
+        });
+        $(".search-model").click(function() {
+            $("#views").removeClass();
+            $("#views").addClass("search-model-view");
+            $('#search-model-view').load(
+                "https://raw.githubusercontent.com/bajricharun/docs-for-doors/main/search-model.view.html"
+            )
+        });
+        $(".bauform").click(function() {
+            $("#views").removeClass();
+            $("#views").addClass("bauform-view");
+            $('#bauform-view').load(
+                "https://raw.githubusercontent.com/bajricharun/docs-for-doors/main/bauform.view.html"
+            )
+        });
+        $(".model").click(function() {
+            $("#views").removeClass();
+            $("#views").addClass("model-view");
+            $('#model-view').load(
+                "https://raw.githubusercontent.com/bajricharun/docs-for-doors/main/model.view.html"
+            )
+        });
+
+        $(".insideModel").click(function() {
+            $("#views").removeClass();
+            $("#views").addClass("insideModel");
+            $('#inside-model-view').load(
+                "https://raw.githubusercontent.com/bajricharun/docs-for-doors/main/inside-model.view.html"
+            )
+        });
+
         function switchViewInside() {
-            if($('#switcher-btn').hasClass('inside-wall')) {
-                $('#switcher-btn').removeClass('inside-wall');
-                $('#switcher-btn').addClass('outside-wall');
-                $('.grid').empty();
-                $('.grid').load("https://raw.githubusercontent.com/bajricharun/task/main/test1.txt")
-
-                
+            if ($("#switcher-btn").hasClass("inside-wall")) {
+                $("#switcher-btn").removeClass("inside-wall");
+                $("#switcher-btn").addClass("outside-wall");
+                $(".grid").empty();
+                $(".grid").load(
+                    "https://raw.githubusercontent.com/bajricharun/task/main/test1.txt"
+                );
             }
         }
+
         function switchViewOutside() {
-            if($('#switcher-btn').hasClass('outside-wall')) {
-                $('#switcher-btn').removeClass('outside-wall');
-                $('#switcher-btn').addClass('inside-wall');
-                $('.grid').empty();
-                $('.grid').load('https://raw.githubusercontent.com/bajricharun/task/main/test.txt');
-
-
+            if ($("#switcher-btn").hasClass("outside-wall")) {
+                $("#switcher-btn").removeClass("outside-wall");
+                $("#switcher-btn").addClass("inside-wall");
+                $(".grid").empty();
+                $(".grid").load(
+                    "https://raw.githubusercontent.com/bajricharun/task/main/test.txt"
+                );
             }
         }
+
         function functionClick() {
-            if($('#konfigurator').hasClass('opened')) {
-                $('#konfigurator').removeClass('opened');
+            if ($("#konfigurator").hasClass("opened")) {
+                $("#konfigurator").removeClass("opened");
             } else {
-                $('#konfigurator').addClass('opened');
+                $("#konfigurator").addClass("opened");
             }
         }
     </script>
-    
-    </body>
+</body>
