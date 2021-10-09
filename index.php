@@ -5,6 +5,7 @@
     <link rel='./css/styles.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"></head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
 <body>
 <div class="container-fluid">
     <div class="row flex-nowrap">
@@ -20,7 +21,7 @@
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate additional" data-bs-parent="#sidebar"><i class="bi bi-gear-fill"></i> <span>Additional</span></a>
                     
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate save" data-bs-parent="#sidebar"><i class="bi bi-save-fill"></i> <span>Save</span></a>
-                    <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate inquiry" data-bs-parent="#sidebar"><i class="bi bi-envelope-fill"></i> <span>Inquiry</span></a>
+                    <a href="./views/inquiry.view.php" class="list-group-item border-end-0 d-inline-block text-truncate inquiry" data-bs-parent="#sidebar"><i class="bi bi-envelope-fill"></i> <span>Inquiry</span></a>
                     <a href="#" class="list-group-item border-end-0 d-inline-block text-truncate admin" data-bs-parent="#sidebar"><i class="bi bi-person-circle"></i> <span>Admin panel</span></a>
                 </div>
             </div>
@@ -64,9 +65,6 @@
         $('.main').load('./views/save.view.php');
     });
 
-    $('.inquiry').click(function () {
-        $('.main').load('./views/inquiry.view.php');
-    });
 
     $('.admin').click(function () {
         $('.main').load('./views/admin.view.php');
