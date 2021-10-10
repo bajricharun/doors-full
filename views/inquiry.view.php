@@ -44,7 +44,7 @@ require('../vendor/autoload.php');
         $mail->Port       = 587;
         $mail->Host       = "smtp.gmail.com";
         $mail->Username   = "gluhibilly@gmail.com";
-        $mail->Password   = "jerbillysanja";
+        $mail->Password   = "";
         $mail->IsHTML(true);
         $mail->AddAddress($email, "recipient-name");
         $mail->SetFrom("gluhibilly@gmail.com", "Door config");
